@@ -1,0 +1,44 @@
+[
+    {
+        "departman": "Departman / Department"
+    },
+    {
+        "departman": "Mühendislik / Engineering"
+    },
+    {
+        "departman": "Yönetim / Management"
+    },
+    {
+        "departman": "Ürün / Product"
+    },
+    {
+        "departman": "Finans / Finance"
+    },
+    {
+        "departman": "İnsan Kaynakları / Human Resources"
+    },
+    {
+        "departman": "Bilgi Teknolojisi / Information Technology"
+    },
+    {
+        "departman": "Hukuk / Legal"
+    },
+    {
+        "departman": "Pazarlama / Marketing"
+    },
+    {
+        "departman": "Tıp ve Bilim / Medical & Science"
+    },
+    {
+        "departman": "Operasyonel / Operations"
+    },
+    {
+        "departman": "Profesyonel Hizmetler / Pro Services"
+    },
+    {
+        "departman": "Satış / Sales"
+    },
+    {
+        "departman": "Destek / Support"
+    }
+]

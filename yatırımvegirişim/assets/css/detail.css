@@ -1,0 +1,111 @@
+/* Girisim Sidebar
+-------------------*/
+.girisim-aside .widget {
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  border-radius: 5px;
+  overflow: hidden;
+  /* background: #ffffff; */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+}
+.girisim-aside .widget-body {
+  padding: 0.8rem;
+}
+.girisim-aside .widget-title {
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+.girisim-aside .widget-title h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #fd9e01;
+  margin: 0;
+}
+
+.girisim-aside .widget-author p {
+  font-size: 16px;
+  margin: 0;
+}
+.girisim-aside .widget-author .avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.girisim-aside .widget-author h6 {
+  font-weight: 600;
+  color: #fd9e01;
+  font-size: 22px;
+  margin: 0;
+  padding-left: 20px;
+}
+.girisim-aside .post-aside {
+  margin-bottom: 15px;
+}
+.girisim-aside .post-aside .post-aside-title h5 {
+  margin: 0;
+}
+.girisim-aside .post-aside .post-aside-title a {
+  font-size: 18px;
+  color: #fd9e01;
+  font-weight: 600;
+}
+.girisim-aside .post-aside .post-aside-meta {
+  padding-bottom: 10px;
+}
+.girisim-aside .post-aside .post-aside-meta a {
+  color: #6f8ba4;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 10px;
+}
+.girisim-aside .girisim-info-aside + .girisim-info-aside {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  margin-top: 15px;
+}
+.girisim-aside .girisim-info-aside .info-right {
+  width: 90px;
+}
+.girisim-aside .girisim-info-aside .info-right img {
+  border-radius: 3px;
+}
+.girisim-aside .girisim-info-aside .info-left {
+  padding-right: 15px;
+}
+.girisim-aside .girisim-info-aside .info-title h5 {
+  margin: 0;
+  font-size: 15px;
+}
+.girisim-aside .girisim-info-aside .info-title h6 {
+  color: #fd9e01;
+  font-weight: 600;
+}
+.girisim-aside .girisim-info-aside .info-meta a {
+  color: #6f8ba4;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.girisim-single {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.girisim-single img {
+  max-width: 100%;
+}
+.girisim-single img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+.nav-tabs .nav-link{
+  color:#fd9e01;
+  font-weight: 700;
+}

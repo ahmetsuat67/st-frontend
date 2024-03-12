@@ -1,0 +1,61 @@
+.login-container {
+  position: relative;
+}
+
+.login-container .loginbox {
+  position: relative;
+  width: 100% !important;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+}
+
+.bg-white {
+  background-color: #fff !important;
+}
+
+.login-container .loginbox .loginbox-title {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 35px;
+  padding-top: 10px;
+  font-family: "Lucida Sans", "trebuchet MS", Arial, Helvetica;
+  font-size: 20px;
+  font-weight: normal;
+  color: #444;
+}
+
+.login-container .loginbox .loginbox-social {
+  padding: 0 10px 10px;
+  text-align: center;
+}
+
+.login-container .loginbox .loginbox-social .social-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #a9a9a9;
+  margin-top: 10px;
+}
+
+.login-container .loginbox .loginbox-textbox .form-control {
+  border-radius: 3px !important;
+  background-clip: padding-box !important;
+}
+
+.login-container .loginbox .loginbox-forgot {
+  text-align: right;
+}
+
+.login-container .loginbox .loginbox-forgot a {
+  font-size: 11px;
+  color: #666;
+}
+
+.login-container .loginbox .loginbox-signup {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.login-container .loginbox .loginbox-signup a {
+  font-size: 13px;
+  color: #666;
+}

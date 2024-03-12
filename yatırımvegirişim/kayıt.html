@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/giris.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Kayıt Ol - StartupTeknoloji</title>
+  </head>
+  <body>
+    <header class="p-4" style="min-height: 107px">
+      <nav class="navbar container navbar-expand-lg align-items-center">
+        <div class="container-fluid navs">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./assets/logo.png"
+              alt="Bootstrap"
+              width="200px"
+              height="34px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav align-items-center">
+              <a
+                class="nav-link nav__link"
+                aria-current="page"
+                href="./girisimler.html"
+                >Girişimler</a
+              >
+              <a class="nav-link nav__link" href="./yatirimcilar.html"
+                >Yatırımcılar</a
+              >
+              <a class="nav-link nav__link" href="./paketler.html">Paketler</a>
+              <a class="nav-link" href="./giris.html"
+                ><button class="btn nav__btn">Giriş Yap</button></a
+              >
+              <a class="nav-link" href="./kayıt.html"
+                ><button class="btn border nav__btn--hover">Kayıt Ol</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="container my-5">
+      <div
+        class="row d-flex justify-content-between align-items-center px-2 gap-3"
+      >
+        <div class="col-lg-7 mx-auto login-container">
+          <div class="loginbox bg-white p-5">
+            <div class="loginbox-title">Kayıt Ol</div>
+            <div class="text-center my-3">
+              Kayıt olmak için aşağıdaki bilgileri doldur.
+            </div>
+            <form class="needs-validation">
+              <div class="row justify-content-center gap-4">
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="reg-fn">Adınız</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      required
+                      id="reg-fn"
+                    />
+                    <div class="invalid-feedback">
+                     Lütfen adınızı girin!
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="reg-ln">Soyadınız</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      required
+                      id="reg-ln"
+                    />
+                    <div class="invalid-feedback">
+                      Lütfen soyadınızı girin!
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="reg-email">Email Adresini Giriniz </label>
+                    <input
+                      class="form-control"
+                      type="email"
+                      required
+                      id="reg-email"
+                    />
+                    <div class="invalid-feedback">
+                      Lütfen geçerli bir email adresi girin!
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="reg-phone">Telefon Numaranız</label>
+                    <input
+                      class="form-control"
+                      type="text"
+                      required
+                      id="reg-phone"
+                    />
+                    <div class="invalid-feedback">
+                      Lütfen telefon numaranızı girin!
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="reg-password">Şifrenizi Giriniz</label>
+                    <input
+                      class="form-control"
+                      type="password"
+                      required
+                      id="reg-password"
+                    />
+                    <div class="invalid-feedback">Lütfen Parolanızı Giriniz!</div>
+                  </div>
+                </div>
+                <div class="col-sm-5">
+                  <div class="form-group">
+                    <label for="reg-password-confirm">Parolanızı Tekrarı</label>
+                    <input
+                      class="form-control"
+                      type="password"
+                      required
+                      id="reg-password-confirm"
+                    />
+                    <div class="invalid-feedback">Şifreniz Eşleşmedi</div>
+                  </div>
+                </div>
+                <div class="text-danger text-center">
+                  <ul>
+                    <li>Parolanız en az 8 karakter içermek zorundadır.  </li>
+                    <li>Parolanız yaygın olarak kullanılan bir parola olamaz. </li>
+                    <li>Lütfen yaygın olark kullanılan parolaları tercih etmeyizniz.</li>
+                    <li></li>
+                  </ul>
+                </div>
+             
+            <div class="col-sm-10 px-1">
+                  <input type="checkbox" checked="checked" />
+                  <label class="control control--checkbox mb-0"><span class="caption"> <span class="text-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" role="button">Üyelik Sözleşmesi</span> ve <span class="text-primary" data-bs-toggle="modal" data-bs-target="#gizlilikPolitikası" role="button">Gizlilik Politikası</span>’nı kabul ediyorum
+                  </span>
+                </div>
+                <div class="col-sm-10 px-1">
+                  <button class="btn nav__btn w-100" type="submit">
+                    Kayıt Ol
+                  </button>
+                </div>
+                <div class="col-sm-10 px-1">
+                  <p class="text-center">Zaten Üye Misin ?</p>
+                  <a href="./giris.html"><button class="btn nav__btn--hover w-100">Hemen Giriş Yap</button></a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+       
+      </div>
+    </main>
+
+    <!-- üyelik sözleşmesi modal -->
+    <div class="modal" tabindex="-1" id="exampleModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Üyelik Sözleşmesi</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <section id="hukuka-aykiri">
+              <strong>Hukuka Aykırı İçerik ve Şikayet</strong>
+              <p>StartupTeknoloji, 5651 sayılı kanun çerçevesinde...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <section id="kullanim">
+              <strong>Kullanım</strong>
+              <p>StartupTeknoloji'de yer alan hizmetler ve içeriklerden...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <section id="icerik">
+              <strong>İçerik</strong>
+              <p>StartupTeknoloji 'de yer alan içeriğin doğru ve/veya güncel...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <section id="telif-haklari">
+              <strong>Telif Hakları ve Alıntı</strong>
+              <p>StartupTeknoloji, bir derleme eser olup, derleme esere...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <section id="gizlilik">
+              <strong>Gizlilik</strong>
+              <p>StartupTeknoloji’de bulunduğunuz süre boyunca 'cookie'...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <section id="hak-ve-yukumlulukler">
+              <strong>StartupMarket.co‘nun Hak ve Yükümlülükleri</strong>
+              <p>Kullanım koşulları önceden bildirmeksizin değiştirebilir...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <footer>
+              <p>Bu belge son olarak 03 Şubat 2024 tarihinde güncellenmiştir.</p>
+          </footer>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- Gizlilik Politikası modal -->
+    <div class="modal" tabindex="-1" id="gizlilikPolitikası">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Gizlilik Politikası</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <section id="hukuka-aykiri">
+              <strong>Hukuka Aykırı İçerik ve Şikayet</strong>
+              <p>StartupTeknoloji, 5651 sayılı kanun çerçevesinde...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <section id="kullanim">
+              <strong>Kullanım</strong>
+              <p>StartupTeknoloji'de yer alan hizmetler ve içeriklerden...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <section id="icerik">
+              <strong>İçerik</strong>
+              <p>StartupTeknoloji 'de yer alan içeriğin doğru ve/veya güncel...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <section id="telif-haklari">
+              <strong>Telif Hakları ve Alıntı</strong>
+              <p>StartupTeknoloji, bir derleme eser olup, derleme esere...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <section id="gizlilik">
+              <strong>Gizlilik</strong>
+              <p>StartupTeknoloji’de bulunduğunuz süre boyunca 'cookie'...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <section id="hak-ve-yukumlulukler">
+              <strong>StartupMarket.co‘nun Hak ve Yükümlülükleri</strong>
+              <p>Kullanım koşulları önceden bildirmeksizin değiştirebilir...</p>
+              <!-- Diğer içerikler buraya eklenebilir -->
+          </section>
+      
+          <footer>
+              <p>Bu belge son olarak 03 Şubat 2024 tarihinde güncellenmiştir.</p>
+          </footer>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="footer_area">
+      <div class="container">
+        <div class="row custom-padding">
+          <div class="col-12 col-sm-6 col-lg-4 custom-padding">
+            <div class="single-footer">
+              <!-- Footer Logo-->
+              <div class="footer-logo mb-3"></div>
+              <a class="navbar-brand" href="#">
+                <img
+                  src="./assets/logo.png"
+                  alt="Bootstrap"
+                  width="200px"
+                  height="34px"
+                />
+              </a>
+              <!-- Footer Social Area-->
+              <div class="footer_social_area my-5 mb-md-0">
+                <a
+                  href="https://www.linkedin.com/company/startupteknoloji/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+
+                <a
+                  href="https://www.instagram.com/startupteknoloji/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+
+                <a
+                  href="https://www.facebook.com/startupteknoloji"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+
+                <a
+                  href="https://twitter.com/startuptek"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+
+                <a
+                  href="https://www.youtube.com/channel/UCidxH9WD49L7Ipaett5rGtA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg custom-padding">
+            <div class="single-footer">
+              <h5 class="footer_title">About</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Corporate Sale</a></li>
+                  <li><a href="#">Terms &amp; Policy</a></li>
+                  <li><a href="#">Community</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg custom-padding">
+            <div class="single-footer">
+              <h5 class="footer_title">Support</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">Help</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Term &amp; Conditions</a></li>
+                  <li><a href="#">Help &amp; Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Single Widget-->
+          <div class="col-12 col-sm-6 col-lg custom-padding">
+            <div class="single-footer">
+              <h5 class="footer_title">Contact</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">Call Centre</a></li>
+                  <li><a href="#">Email Us</a></li>
+                  <li><a href="#">Term &amp; Conditions</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- <script src="app.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

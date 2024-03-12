@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./assets/css/profil.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <style>
+      .mycard {
+        border: 1px solid black;
+        padding: 1rem;
+        box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+      }
+      .rating-wrapper {
+        direction: rtl !important;
+        display: inline-flex;
+        margin-left: auto;
+
+        label {
+          color: #e1e6f6;
+          cursor: pointer;
+          display: inline-flex;
+          font-size: 2rem;
+          padding: 1rem 0.6rem;
+          transition: color 0.5s;
+        }
+
+        svg {
+          -webkit-text-fill-color: transparent;
+          -webkit-filter: drop-shadow (4px 1px 6px rgba(198, 206, 237, 1));
+          filter: drop-shadow(5px 1px 3px rgba(198, 206, 237, 1));
+        }
+
+        input {
+          height: 100%;
+          width: 100%;
+        }
+
+        input {
+          display: none;
+        }
+
+        label:hover,
+        label:hover ~ label,
+        input:checked ~ label {
+          color: #fd9e01;
+        }
+
+        label:hover,
+        label:hover ~ label,
+        input:checked ~ label {
+          color: #fd9e01;
+        }
+      }
+    </style>
+    <title>Profil - StartupTeknoloji</title>
+  </head>
+  <body>
+    <header class="p-4" style="min-height: 107px">
+      <nav class="navbar container navbar-expand-lg align-items-center">
+        <div class="container-fluid navs">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./assets/logo.png"
+              alt="Bootstrap"
+              width="200px"
+              height="34px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav align-items-center">
+              <a
+                class="nav-link nav__link"
+                aria-current="page"
+                href="./girisimler.html"
+                >Girişimler</a
+              >
+              <a class="nav-link nav__link" href="./yatirimcilar.html"
+                >Yatırımcılar</a
+              >
+              <a class="nav-link nav__link" href="./paketler.html">Paketler</a>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img
+                    src="https://ca.slack-edge.com/T05QKNCTHM4-U06BNMKPPBJ-g53e9bbde7fd-512"
+                    class="rounded-circle"
+                    width="40px"
+                  />
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./profil.html">Hesap</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./girisimler.html">Çıkış</a>
+                  </li>
+                </ul>
+              </li>
+              <a class="nav-link" href="./girisimciform/index.html"
+                ><button class="btn nav__btn">Girişimci Oluştur</button></a
+              >
+              <a class="nav-link" href="./yatırımcı/index.html"
+                ><button class="btn nav__btn--hover">
+                  Yatırımcı Oluştur
+                </button></a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main
+      class="container light-style flex-grow-1 my-4 p-3"
+      style="min-height: 50vh"
+    >
+      <h4 class="font-weight-bold py-3 mb-4">Profil</h4>
+
+      <div class="">
+        <div class="row no-gutters row-bordered row-border-light">
+          <div class="col-md-3 pt-0">
+            <div class="list-group list-group-flush account-settings-links">
+              <a
+                class="list-group-item list-group-item-action active"
+                data-bs-toggle="list"
+                href="#account-general"
+              >
+                <i class="bi bi-info-circle p-3"></i> Genel Bilgiler
+              </a>
+              <a
+                class="list-group-item list-group-item-action"
+                data-bs-toggle="list"
+                href="#girisimler"
+              >
+                <i class="bi bi-shop p-3"></i> Girişimler
+              </a>
+              <a
+                class="list-group-item list-group-item-action"
+                data-bs-toggle="list"
+                href="#yatirim"
+              >
+                <i class="bi bi-shop p-3"></i> Yatırımlar
+              </a>
+              <a
+                class="list-group-item list-group-item-action"
+                data-bs-toggle="list"
+                href="#radarımdakiler"
+              >
+                <i class="bi bi-list-check p-3"></i> İzleme Listem
+              </a>
+              <a
+                class="list-group-item list-group-item-action"
+                data-bs-toggle="list"
+                href="#account-notes"
+              >
+                <i class="bi bi-journal-text p-3"></i> Notlarım
+              </a>
+              <a
+                class="list-group-item list-group-item-action"
+                data-bs-toggle="list"
+                href="#account-point"
+              >
+                <i class="bi bi-journal-text p-3"></i> Puanlarım
+              </a>
+              <a
+                class="list-group-item list-group-item-action"
+                data-bs-toggle="list"
+                href="#account-change-password"
+              >
+                <i class="bi bi-lock p-3"></i> Şifreyi Değiştir
+              </a>
+              <a
+                class="list-group-item list-group-item-action"
+                data-bs-toggle="list"
+                href="#paketlerin"
+              >
+                <i class="bi bi-box p-3"></i> Paketlerin
+              </a>
+            </div>
+          </div>
+          <div class="col-md-9 bg-white">
+            <div class="tab-content">
+              <div class="tab-pane fade active show" id="account-general">
+                <div class="card-body media align-items-center">
+                  <br />
+                  <img
+                    src="https://ca.slack-edge.com/T05QKNCTHM4-U06BNMKPPBJ-g53e9bbde7fd-512"
+                    id="logoPreview"
+                    alt=""
+                    class="d-block ui-w-80"
+                  />
+                  <br />
+
+                  <div class="media-body ml-4">
+                    <label
+                      id="logoUploadLabel"
+                      for="logoUpload"
+                      class="btn btn-outline-primary"
+                    >
+                      Yeni resim ekle
+                      <input
+                        type="file"
+                        class="account-settings-fileinput"
+                        id="logoUpload"
+                        accept="image/*"
+                        onchange="previewLogo(this)"
+                      />
+                    </label>
+                    &nbsp;
+                    <button type="button" class="btn btn-default md-btn-flat">
+                      Temizle
+                    </button>
+
+                    <div class="text-light small mt-1">
+                      JPG, GIF or PNG. Maksimum boyut 800KB
+                    </div>
+                  </div>
+                </div>
+                <hr class="border-light m-0" />
+
+                <div class="row gap-3">
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="reg-fn">İsim</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        required
+                        value="Ahmet Suat"
+                        id="reg-fn"
+                      />
+                      <div class="invalid-feedback">
+                        Lütfen isminizi giriniz!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="reg-ln">Soyisim</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        required
+                        value="Pınar"
+                        id="reg-ln"
+                      />
+                      <div class="invalid-feedback">
+                        Lütfen soyisminizi giriniz!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="reg-email">Mail Adresi</label>
+                      <input
+                        class="form-control"
+                        type="email"
+                        required
+                        value="asp@gmail.com"
+                        id="reg-email"
+                      />
+                      <div class="invalid-feedback">
+                        Lütfen mail adresinizi giriniz!
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <div class="form-group">
+                      <label for="reg-phone">Telefon Numarası</label>
+                      <input
+                        class="form-control"
+                        type="text"
+                        required
+                        value="+905555555555"
+                        id="reg-phone"
+                      />
+                      <div class="invalid-feedback">
+                        Lütfen telefon numaranızı giriniz!
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <br />
+                <div class="col-sm-10 text-start mt-3 mb-3">
+                  <button type="button" class="btn nav__btn">
+                    Değişiklikleri Kaydet</button
+                  >&nbsp;
+                  <button type="button" class="btn nav__btn--hover">
+                    Vazgeç
+                  </button>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="girisimler">
+                <main
+                  class="d-flex flex-column mx-auto my-5 py-4 main-div px-4 w-sm-75"
+                >
+                  <div class="text-center">
+                    <h1>GİRİŞİMLER</h1>
+                    <p>
+                      Girişimine ait bilgileri buradan görüntüleyebilir ve
+                      düzenleyebilirsin.
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex mx-auto flex-column w-100 gap-4 row"
+                    id="card-div"
+                  >
+                    <!-- <div class="card mx-auto w-100"> -->
+                    <div class="mycard col-sm-8 mx-auto">
+                      <div class="card-body p-4 rounded">
+                        <div class="d-flex gap-3 align-items-center">
+                          <div class="avatar">
+                            <a href="./gdetail.html">
+                              <img
+                                src="https://startupmarket.co/cache/100x100/upload/images/startup/65bb84c98dc42012818042.jpg"
+                                title=""
+                                class="rounded-circle"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div>
+                            <a href="./gdetail.html"
+                              ><h3 class="title">IncUnit</h3></a
+                            >
+                            <p class="text-muted line-clamp-3">
+                              Amerika'da şirketleşme ve vergi planlaması artık
+                              daha kolay!
+                            </p>
+                            <button
+                              class="btn mt-3"
+                              style="background-color: #fd9e01"
+                              href="#girişiDüzenle"
+                            >
+                              Girişimini Düzenle
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- </div> -->
+                    <div class="mycard col-sm-8 mx-auto">
+                      <div class="card-body p-4 rounded">
+                        <div class="d-flex gap-3 align-items-center">
+                          <div class="avatar">
+                            <a href="./gdetail.html">
+                              <img
+                                src="https://startupmarket.co/cache/100x100/upload/images/startup/65bb84c98dc42012818042.jpg"
+                                title=""
+                                class="rounded-circle"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div>
+                            <a href="./gdetail.html"
+                              ><h3 class="title">IncUnit</h3></a
+                            >
+                            <p class="text-muted line-clamp-3">
+                              Amerika'da şirketleşme ve vergi planlaması artık
+                              daha kolay!
+                            </p>
+                            <button
+                              class="btn mt-3"
+                              style="background-color: #fd9e01"
+                            >
+                              Girişimini Düzenle
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+              </div>
+              <div class="tab-pane fade" id="yatirim">
+                <main
+                  class="d-flex flex-column mx-auto my-5 py-4 main-div px-4 w-sm-75"
+                >
+                  <div class="text-center">
+                    <h1>YATIRIMCI PROFİLİM</h1>
+                    <p>
+                      Yatırımınıza ait bilgileri buradan görüntüleyebilir ve
+                      düzenleyebilirsin.
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex mx-auto flex-column w-100 gap-4 row"
+                    id="card-div"
+                  >
+                    <!-- <div class="card mx-auto w-100"> -->
+                    <div class="mycard col-sm-8 mx-auto">
+                      <div class="card-body p-4 rounded">
+                        <div class="d-flex gap-3 align-items-center">
+                          <div class="avatar">
+                            <a href="./gdetail.html">
+                              <img
+                                src="https://startupmarket.co/cache/100x100/upload/images/startup/65bb84c98dc42012818042.jpg"
+                                title=""
+                                class="rounded-circle"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div>
+                            <a href="./gdetail.html"
+                              ><h3 class="title">IncUnit</h3></a
+                            >
+                            <p class="text-muted line-clamp-3">
+                              Amerika'da şirketleşme ve vergi planlaması artık
+                              daha kolay!
+                            </p>
+                            <button
+                              class="btn mt-3"
+                              style="background-color: #fd9e01"
+                              href="#girişiDüzenle"
+                            >
+                              Yatırımı Düzenle
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- </div> -->
+                    <div class="mycard col-sm-8 mx-auto">
+                      <div class="card-body p-4 rounded">
+                        <div class="d-flex gap-3 align-items-center">
+                          <div class="avatar">
+                            <a href="./gdetail.html">
+                              <img
+                                src="https://startupmarket.co/cache/100x100/upload/images/startup/65bb84c98dc42012818042.jpg"
+                                title=""
+                                class="rounded-circle"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div>
+                            <a href="./gdetail.html"
+                              ><h3 class="title">IncUnit</h3></a
+                            >
+                            <p class="text-muted line-clamp-3">
+                              Amerika'da şirketleşme ve vergi planlaması artık
+                              daha kolay!
+                            </p>
+                            <button
+                              class="btn mt-3"
+                              style="background-color: #fd9e01"
+                            >
+                              Yatırımı Düzenle
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+              </div>
+              <div class="tab-pane fade" id="radarımdakiler">
+                <div
+                  class="row d-flex justify-content-center p-5 flex-grow-1 gap-5"
+                >
+                  <div class="card shadow-lg">
+                    <a href="./gdetail.html" class="card-img-top">
+                      <img
+                        class="img-fluid p-2"
+                        src="https://startupmarket.co/cache/360x180/upload/images/startup/65a2589b5621d948462186.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <a href="./gdetail.html" class="mr-3">
+                          <img
+                            class="rounded-circle"
+                            src="https://startupmarket.co/cache/100x100/upload/images/startup/65a25297bff43331372965.jpg"
+                            alt="Yef Logo"
+                          />
+                        </a>
+                        <div>
+                          <a href="./gdetail.html" class="card-title">Yef</a>
+                          <span class="card-subtitle d-block"
+                            >İstanbul, Türkiye</span
+                          >
+                        </div>
+                      </div>
+                      <p class="mt-3 line-clamp-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Qui dolores repellat recusandae voluptatum assumenda
+                        autem modi deleniti libero alias, sunt iusto, minima ab
+                        corrupti voluptatibus!
+                      </p>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+                      <a
+                        href="./gdetail.html"
+                        class="btn nav__btn btn-block w-75"
+                        >İncele</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card shadow-lg">
+                    <!-- Gölgelendirme için shadow-lg sınıfını ekledik -->
+                    <a href="./gdetail.html" class="card-img-top">
+                      <img
+                        class="img-fluid p-2"
+                        src="https://startupmarket.co/cache/360x180/upload/images/startup/65a2589b5621d948462186.jpg"
+                        alt=""
+                      />
+                    </a>
+                    <div class="card-body">
+                      <div class="d-flex align-items-center">
+                        <a href="./gdetail.html" class="mr-3">
+                          <img
+                            class="rounded-circle"
+                            src="https://startupmarket.co/cache/100x100/upload/images/startup/65a25297bff43331372965.jpg"
+                            alt="Yef Logo"
+                          />
+                        </a>
+                        <div>
+                          <a href="./gdetail.html" class="card-title">Yef</a>
+                          <span class="card-subtitle d-block"
+                            >İstanbul, Türkiye</span
+                          >
+                        </div>
+                      </div>
+                      <p class="mt-3 line-clamp-3">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Qui dolores repellat recusandae voluptatum assumenda
+                        autem modi deleniti libero alias, sunt iusto, minima ab
+                        corrupti voluptatibus!
+                      </p>
+                    </div>
+                    <div class="card-body d-flex justify-content-center">
+                      <a
+                        href="./gdetail.html"
+                        class="btn nav__btn btn-block w-75"
+                        >İncele</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="account-notes">
+                <main
+                  class="d-flex flex-column mx-auto my-5 py-4 main-div px-4 w-sm-75"
+                >
+                  <div class="text-center">
+                    <h1>NOTLARIM</h1>
+                    <p>
+                      Notlarınızı buradan görüntüleyebilir ve düzenleyebilirsin.
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex mx-auto flex-column w-100 gap-4 row"
+                    id="card-div"
+                  >
+                    <!-- <div class="card mx-auto w-100"> -->
+                    <div class="mycard col-sm-8 mx-auto">
+                      <div class="card-body p-4 rounded">
+                        <div class="d-flex gap-3 align-items-center">
+                          <div class="avatar">
+                            <a href="./gdetail.html">
+                              <img
+                                src="https://startupmarket.co/cache/100x100/upload/images/startup/65bb84c98dc42012818042.jpg"
+                                title=""
+                                class="rounded-circle"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div>
+                            <a href="./gdetail.html"
+                              ><h3 class="title">IncUnit</h3></a
+                            >
+                            <p class="text-muted line-clamp-3">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Iusto ducimus aspernatur ex laboriosam,
+                              officiis, ipsa, sequi repudiandae est iure labore
+                              doloribus exercitationem! Mollitia minima repellat
+                              eius voluptatem quas, temporibus assumenda!
+                            </p>
+                            <button
+                              class="btn mt-3"
+                              style="background-color: #fd9e01"
+                              href="#girişiDüzenle"
+                            >
+                              Notu Sil
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- </div> -->
+                    <div class="mycard col-sm-8 mx-auto">
+                      <div class="card-body p-4 rounded">
+                        <div class="d-flex gap-3 align-items-center">
+                          <div class="avatar">
+                            <a href="./gdetail.html">
+                              <img
+                                src="https://startupmarket.co/cache/100x100/upload/images/startup/65bb84c98dc42012818042.jpg"
+                                title=""
+                                class="rounded-circle"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div>
+                            <a href="./gdetail.html"
+                              ><h3 class="title">IncUnit</h3></a
+                            >
+                            <p class="text-muted line-clamp-3">
+                              Lorem ipsum dolor sit amet consectetur adipisicing
+                              elit. Iusto ducimus aspernatur ex laboriosam,
+                              officiis, ipsa, sequi repudiandae est iure labore
+                              doloribus exercitationem! Mollitia minima repellat
+                              eius voluptatem quas, temporibus assumenda!
+                            </p>
+                            <button
+                              class="btn mt-3"
+                              style="background-color: #fd9e01"
+                              href="#girişiDüzenle"
+                            >
+                              Notu Sil
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+              </div>
+              <div class="tab-pane fade" id="account-point">
+                <main
+                  class="d-flex flex-column mx-auto my-5 py-4 main-div px-4 w-sm-75"
+                >
+                  <div class="text-center">
+                    <h3>Puanlarım</h3>
+                    <p>
+                      Puanlarınızı buradan görüntüleyebilir ve
+                      düzenleyebilirsin.
+                    </p>
+                  </div>
+                  <div
+                    class="d-flex mx-auto flex-column w-100 gap-4 row"
+                    id="card-div"
+                  >
+                    <!-- <div class="card mx-auto w-100"> -->
+                    <div class="mycard col-sm-8 mx-auto">
+                      <div class="card-body p-4 rounded">
+                        <div class="d-flex gap-3 align-items-center">
+                          <div class="avatar">
+                            <a href="./gdetail.html">
+                              <img
+                                src="https://startupmarket.co/cache/100x100/upload/images/startup/65bb84c98dc42012818042.jpg"
+                                title=""
+                                class="rounded-circle"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div>
+                            <a href="./gdetail.html"
+                              ><h3 class="title">IncUnit</h3></a
+                            >
+                            <p class="text-muted line-clamp-3">
+                              Amerika'da şirketleşme ve vergi planlaması artık
+                              daha kolay!
+                            </p>
+                            <div class="container-wrapper">
+                              <div
+                                class="container d-flex align-items-center justify-content-center"
+                              >
+                                <div class="row justify-content-center">
+                                  <!-- star rating -->
+                                  <div class="rating-wrapper">
+                                    <!-- star 5 -->
+                                    <input
+                                      type="radio"
+                                      id="5-star-rating"
+                                      name="star-rating"
+                                      value="5"
+                                    />
+                                    <label
+                                      for="5-star-rating"
+                                      class="star-rating"
+                                    >
+                                      <i class="fas fa-star d-inline-block"></i>
+                                    </label>
+
+                                    <!-- star 4 -->
+                                    <input
+                                      type="radio"
+                                      id="4-star-rating"
+                                      name="star-rating"
+                                      value="4"
+                                    />
+                                    <label
+                                      for="4-star-rating"
+                                      class="star-rating star"
+                                    >
+                                      <i class="fas fa-star d-inline-block"></i>
+                                    </label>
+
+                                    <!-- star 3 -->
+                                    <input
+                                      type="radio"
+                                      id="3-star-rating"
+                                      name="star-rating"
+                                      value="3"
+                                    />
+                                    <label
+                                      for="3-star-rating"
+                                      class="star-rating star"
+                                    >
+                                      <i class="fas fa-star d-inline-block"></i>
+                                    </label>
+
+                                    <!-- star 2 -->
+                                    <input
+                                      type="radio"
+                                      id="2-star-rating"
+                                      name="star-rating"
+                                      value="2"
+                                    />
+                                    <label
+                                      for="2-star-rating"
+                                      class="star-rating star"
+                                    >
+                                      <i class="fas fa-star d-inline-block"></i>
+                                    </label>
+
+                                    <!-- star 1 -->
+                                    <input
+                                      type="radio"
+                                      id="1-star-rating"
+                                      name="star-rating"
+                                      value="1"
+                                    />
+                                    <label
+                                      for="1-star-rating"
+                                      class="star-rating star"
+                                    >
+                                      <i class="fas fa-star d-inline-block"></i>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- </div> -->
+                    <div class="mycard col-sm-8 mx-auto">
+                      <div class="card-body p-4 rounded">
+                        <div class="d-flex gap-3 align-items-center">
+                          <div class="avatar">
+                            <a href="./gdetail.html">
+                              <img
+                                src="https://startupmarket.co/cache/100x100/upload/images/startup/65bb84c98dc42012818042.jpg"
+                                title=""
+                                class="rounded-circle"
+                                alt=""
+                              />
+                            </a>
+                          </div>
+                          <div>
+                            <a href="./gdetail.html"
+                              ><h3 class="title">IncUnit</h3></a
+                            >
+                            <p class="text-muted line-clamp-3">
+                              Amerika'da şirketleşme ve vergi planlaması artık
+                              daha kolay!
+                            </p>
+
+                            <div class="container-wrapper">
+                              <div
+                                class="container d-flex align-items-center justify-content-center"
+                              >
+                                <div class="row justify-content-center">
+                                  <!-- star rating -->
+                                  <div class="rating-wrapper">
+                                    <!-- star 5 -->
+                                    <input
+                                      type="radio"
+                                      id="5-star-rating"
+                                      name="star-rating"
+                                      value="5"
+                                    />
+                                    <label
+                                      for="5-star-rating"
+                                      class="star-rating"
+                                    >
+                                      <i class="fas fa-star d-inline-block"></i>
+                                    </label>
+
+                                    <!-- star 4 -->
+                                    <input
+                                      type="radio"
+                                      id="4-star-rating"
+                                      name="star-rating"
+                                      value="4"
+                                    />
+                                    <label
+                                      for="4-star-rating"
+                                      class="star-rating star"
+                                    >
+                                      <i class="fas fa-star d-inline-block"></i>
+                                    </label>
+
+                                    <!-- star 3 -->
+                                    <input
+                                      type="radio"
+                                      id="3-star-rating"
+                                      name="star-rating"
+                                      value="3"
+                                    />
+                                    <label
+                                      for="3-star-rating"
+                                      class="star-rating star"
+                                    >
+                                      <i class="fas fa-star d-inline-block"></i>
+                                    </label>
+
+                                    <!-- star 2 -->
+                                    <input
+                                      type="radio"
+                                      id="2-star-rating"
+                                      name="star-rating"
+                                      value="2"
+                                    />
+                                    <label
+                                      for="2-star-rating"
+                                      class="star-rating star"
+                                    >
+                                      <i class="fas fa-star d-inline-block"></i>
+                                    </label>
+
+                                    <!-- star 1 -->
+                                    <input
+                                      type="radio"
+                                      id="1-star-rating"
+                                      name="star-rating"
+                                      value="1"
+                                    />
+                                    <label
+                                      for="1-star-rating"
+                                      class="star-rating star"
+                                    >
+                                      <i class="fas fa-star d-inline-block"></i>
+                                    </label>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </main>
+              </div>
+
+              <div class="tab-pane fade" id="account-change-password">
+                <div class="card-body p-5">
+                  <div class="form-group col-sm-5">
+                    <label class="form-label">Mevcut Şifreniz</label>
+                    <input type="password" class="form-control" />
+                  </div>
+
+                  <div class="form-group col-sm-5">
+                    <label class="form-label">Yeni Şifre</label>
+                    <input type="password" class="form-control" />
+                  </div>
+
+                  <div class="form-group col-sm-5">
+                    <label class="form-label"
+                      >Yeni Şifreyi Tekrar Giriniz</label
+                    >
+                    <input type="password" class="form-control" />
+                  </div>
+                  <div class="col-sm-5 text-end mt-3">
+                    <button type="button" class="btn nav__btn">
+                      Değişiklikleri Kaydet</button
+                    >&nbsp;
+                    <button type="button" class="btn nav__btn--hover">
+                      Vazgeç
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade p-5" id="paketlerin">
+                <figure class="fir-image-figure">
+                  <img
+                    class="fir-imageover-image fir-clickcircle"
+                    src="https://fir-rollup.firebaseapp.com/twitter-logo.png"
+                  />
+
+                  <figcaption>
+                    <div class="fig-author-figure-title">Standart Üye</div>
+                    <div class="fig-author-figure-title">
+                      Temel Özellikleri Kullanmak Için
+                    </div>
+                    <div class="fig-author-figure-title">0 ₺ /yıllık</div>
+                  </figcaption>
+                </figure>
+                <a href="./paketler.html"
+                  ><button class="btn nav__btn">Paket Yükselt</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer_area">
+      <div class="container">
+        <div class="row custom-padding">
+          <div class="col-12 col-sm-6 col-lg-4 custom-padding">
+            <div class="single-footer">
+              <!-- Footer Logo-->
+              <div class="footer-logo mb-3"></div>
+              <a class="navbar-brand" href="#">
+                <img
+                  src="./assets/logo.png"
+                  alt="Bootstrap"
+                  width="200px"
+                  height="34px"
+                />
+              </a>
+              <!-- Footer Social Area-->
+              <div class="footer_social_area my-5 mb-md-0">
+                <a
+                  href="https://www.linkedin.com/company/startupteknoloji/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+
+                <a
+                  href="https://www.instagram.com/startupteknoloji/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+
+                <a
+                  href="https://www.facebook.com/startupteknoloji"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+
+                <a
+                  href="https://twitter.com/startuptek"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+
+                <a
+                  href="https://www.youtube.com/channel/UCidxH9WD49L7Ipaett5rGtA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg custom-padding">
+            <div class="single-footer">
+              <h5 class="footer_title">About</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Corporate Sale</a></li>
+                  <li><a href="#">Terms &amp; Policy</a></li>
+                  <li><a href="#">Community</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg custom-padding">
+            <div class="single-footer">
+              <h5 class="footer_title">Support</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">Help</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Term &amp; Conditions</a></li>
+                  <li><a href="#">Help &amp; Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Single Widget-->
+          <div class="col-12 col-sm-6 col-lg custom-padding">
+            <div class="single-footer">
+              <h5 class="footer_title">Contact</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">Call Centre</a></li>
+                  <li><a href="#">Email Us</a></li>
+                  <li><a href="#">Term &amp; Conditions</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- <script src="app.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function previewLogo(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function (e) {
+            document.getElementById("logoPreview").src = e.target.result;
+            document.getElementById("logoPreview").style.display = "block";
+          };
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+    </script>
+  </body>
+</html>

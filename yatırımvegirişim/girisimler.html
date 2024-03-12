@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Girişimler - StartupTeknoloji</title>
+  </head>
+  <body>
+    <header class="p-4" style="min-height: 107px">
+      <nav class="navbar container navbar-expand-lg align-items-center">
+        <div class="container-fluid navs">
+          <a class="navbar-brand" href="#">
+            <img
+              src="./assets/logo.png"
+              alt="Bootstrap"
+              width="200px"
+              height="34px"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav align-items-center">
+              <a
+                class="nav-link nav__link"
+                aria-current="page"
+                href="./girisimler.html"
+                >Girişimler</a
+              >
+              <a class="nav-link nav__link" href="./yatirimcilar.html"
+                >Yatırımcılar</a
+              >
+              <a class="nav-link nav__link" href="./paketler.html">Paketler</a>
+              <a class="nav-link" href="./giris.html"
+                ><button class="btn nav__btn">Giriş Yap</button></a
+              >
+              <a class="nav-link" href="./kayıt.html"
+                ><button class="btn border nav__btn--hover">Kayıt Ol</button></a
+              >
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="overlay" style="display: none"></div>
+    <main class="main">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h2 class="title">2000 Girişim Listeleniyor</h2>
+          <div class="me-md-1">
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Girişimleri Sırala</option>
+              <option value="1">Alfabetik</option>
+              <option value="2">Son Eklenenler</option>
+              <option value="3">Kuruluş Tarihi</option>
+            </select>
+          </div>
+        </div>
+        <div class="row main-content d-flex gap-2 justify-content-center">
+          <div class="sidebar px-0">
+            <h1
+              class="border-bottom filter-header d-flex justify-content-between d-lg-none p-3 mb-0 align-items-center"
+            >
+              <span class="mr-2 filter-close-btn" role="button"> X </span>
+              <span class="mr-2 text-uppercase" role="button">Temizle</span>
+            </h1>
+            <div class="sidebar__inner">
+              <div class="filter-body">
+                <div>
+                  <h6 class="border-bottom filter-title">
+                    GİRİŞİM ÖZELLİKLERİ
+                  </h6>
+                  <div class="mb-30 filter-options">
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Aktif Yatırım Arayanlar"
+                      />
+                      <label
+                        class="custom-control-label"
+                        for="Aktif Yatırım Arayanlar"
+                        >Aktif Yatırım Arayanlar</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Yatırım Alanlar"
+                      />
+                      <label class="custom-control-label" for="Yatırım Alanlar"
+                        >Yatırım Alanlar</label
+                      >
+                    </div>
+                  </div>
+                  <!--seating option end-->
+                  <h6 class="font-xbold body-font border-bottom filter-title">
+                    GİRİŞİM AŞAMASI
+                  </h6>
+                  <div class="mb-3 filter-options" id="cusine-options">
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Fikir"
+                      />
+                      <label class="custom-control-label" for="Fikir"
+                        >Fikir</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Tasarım & Kodlama"
+                      />
+                      <label
+                        class="custom-control-label"
+                        for="Tasarım & Kodlama"
+                        >Tasarım & Kodlama</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Kullanıcılar"
+                      />
+                      <label class="custom-control-label" for="Kullanıcılar"
+                        >Kullanıcılar</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Kapandı"
+                      />
+                      <label class="custom-control-label" for="Kapandı"
+                        >Kapandı</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Satıldı"
+                      />
+                      <label class="custom-control-label" for="Satıldı"
+                        >Satıldı</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Satıldı"
+                      />
+                      <label class="custom-control-label" for="Satıldı"
+                        >Satıldı</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Satıldı"
+                      />
+                      <label class="custom-control-label" for="Satıldı"
+                        >Satıldı</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Satıldı"
+                      />
+                      <label class="custom-control-label" for="Satıldı"
+                        >Satıldı</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Satıldı"
+                      />
+                      <label class="custom-control-label" for="Satıldı"
+                        >Satıldı</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Satıldı"
+                      />
+                      <label class="custom-control-label" for="Satıldı"
+                        >Satıldı</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Satıldı"
+                      />
+                      <label class="custom-control-label" for="Satıldı"
+                        >Satıldı</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Satıldı"
+                      />
+                      <label class="custom-control-label" for="Satıldı"
+                        >Satıldı</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Satıldı"
+                      />
+                      <label class="custom-control-label" for="Satıldı"
+                        >Satıldı</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Satıldı"
+                      />
+                      <label class="custom-control-label" for="Satıldı"
+                        >Satıldı</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Satıldı"
+                      />
+                      <label class="custom-control-label" for="Satıldı"
+                        >Satıldı</label
+                      >
+                    </div>
+                  </div>
+
+                  <!-- cusine filters end -->
+                  <h6 class="font-xbold body-font border-bottom filter-title">
+                    ÇALIŞAN SAYISI
+                  </h6>
+                  <div class="mb-3 filter-options" id="services-options">
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="1-3"
+                      />
+                      <label class="custom-control-label" for="1-3">1-3</label>
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="4-10"
+                      />
+                      <label class="custom-control-label" for="4-10"
+                        >4-10</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="11-20"
+                      />
+                      <label class="custom-control-label" for="11-20"
+                        >11-20</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="21-50"
+                      />
+                      <label class="custom-control-label" for="21-50"
+                        >21-50</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="51-100"
+                      />
+                      <label class="custom-control-label" for="51-100"
+                        >51-100</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="100+"
+                      />
+                      <label class="custom-control-label" for="100+"
+                        >100+</label
+                      >
+                    </div>
+                  </div>
+                  <h6 class="border-bottom filter-title">GİRİŞİM SEKTÖRÜ</h6>
+                  <div class="mb-3 filter-options" id="services-options">
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Eğitim"
+                      />
+                      <label class="custom-control-label" for="Eğitim"
+                        >Eğitim</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Eğlence"
+                      />
+                      <label class="custom-control-label" for="Eğlence"
+                        >Eğlence</label
+                      >
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                      <input
+                        type="checkbox"
+                        class="custom-control-input"
+                        id="Enerji"
+                      />
+                      <label class="custom-control-label" for="Enerji"
+                        >Enerji</label
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content" style="width: 78%; flex: 1 1 auto">
+            <div
+              class="d-flex justify-content-between border-bottom align-items-center mb-2"
+            >
+              <div class="filters-actions">
+                <div>
+                  <button class="btn filter-btn d-lg-none">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="mr-2"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      fill="#000000"
+                    >
+                      <path d="M0 0h24v24H0V0z" fill="none" />
+                      <path d="M3 18h6v-2H3v2zM3 6v2h18V6H3zm0 7h12v-2H3v2z" />
+                    </svg>
+                    Filter
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex justify-content-center flex-grow-1 gap-5">
+              <div class="card">
+                <a href="./gdetail.html" class="card-img-top">
+                  <img
+                    class="img-fluid p-2"
+                    src="https://startupmarket.co/cache/360x180/upload/images/startup/65a2589b5621d948462186.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <a href="./gdetail.html" class="mr-3">
+                      <img
+                        class="rounded-circle"
+                        src="https://startupmarket.co/cache/100x100/upload/images/startup/65a25297bff43331372965.jpg"
+                        alt="Yef Logo"
+                      />
+                    </a>
+                    <div>
+                      <a href="./gdetail.html" class="card-title">Yef</a>
+                      <span class="card-subtitle d-block"
+                        >İstanbul, Türkiye</span
+                      >
+                    </div>
+                  </div>
+                  <p class="mt-3 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                    dolores repellat recusandae voluptatum assumenda autem modi
+                    deleniti libero alias, sunt iusto, minima ab corrupti
+                    voluptatibus!
+                  </p>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+                  <a href="./gdetail.html" class="btn nav__btn btn-block w-75"
+                    >İncele</a
+                  >
+                </div>
+              </div>
+              <div class="card">
+                <a href="./gdetail.html" class="card-img-top">
+                  <img
+                    class="img-fluid p-2"
+                    src="https://startupmarket.co/cache/360x180/upload/images/startup/65a2589b5621d948462186.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <a href="./gdetail.html" class="mr-3">
+                      <img
+                        class="rounded-circle"
+                        src="https://startupmarket.co/cache/100x100/upload/images/startup/65a25297bff43331372965.jpg"
+                        alt="Yef Logo"
+                      />
+                    </a>
+                    <div>
+                      <a href="./gdetail.html" class="card-title">Yef</a>
+                      <span class="card-subtitle d-block"
+                        >İstanbul, Türkiye</span
+                      >
+                    </div>
+                  </div>
+                  <p class="mt-3 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                    dolores repellat recusandae voluptatum assumenda autem modi
+                    deleniti libero alias, sunt iusto, minima ab corrupti
+                    voluptatibus!
+                  </p>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+                  <a href="./gdetail.html" class="btn nav__btn btn-block w-75"
+                    >İncele</a
+                  >
+                </div>
+              </div>
+              <div class="card">
+                <a href="./gdetail.html" class="card-img-top">
+                  <img
+                    class="img-fluid p-2"
+                    src="https://startupmarket.co/cache/360x180/upload/images/startup/65a2589b5621d948462186.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <a href="./gdetail.html" class="mr-3">
+                      <img
+                        class="rounded-circle"
+                        src="https://startupmarket.co/cache/100x100/upload/images/startup/65a25297bff43331372965.jpg"
+                        alt="Yef Logo"
+                      />
+                    </a>
+                    <div>
+                      <a href="./gdetail.html" class="card-title">Yef</a>
+                      <span class="card-subtitle d-block"
+                        >İstanbul, Türkiye</span
+                      >
+                    </div>
+                  </div>
+                  <p class="mt-3 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                    dolores repellat recusandae voluptatum assumenda autem modi
+                    deleniti libero alias, sunt iusto, minima ab corrupti
+                    voluptatibus!
+                  </p>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+                  <a href="./gdetail.html" class="btn nav__btn btn-block w-75"
+                    >İncele</a
+                  >
+                </div>
+              </div>
+              <div class="card">
+                <a href="./gdetail.html" class="card-img-top">
+                  <img
+                    class="img-fluid p-2"
+                    src="https://startupmarket.co/cache/360x180/upload/images/startup/65a2589b5621d948462186.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <a href="./gdetail.html" class="mr-3">
+                      <img
+                        class="rounded-circle"
+                        src="https://startupmarket.co/cache/100x100/upload/images/startup/65a25297bff43331372965.jpg"
+                        alt="Yef Logo"
+                      />
+                    </a>
+                    <div>
+                      <a href="./gdetail.html" class="card-title">Yef</a>
+                      <span class="card-subtitle d-block"
+                        >İstanbul, Türkiye</span
+                      >
+                    </div>
+                  </div>
+                  <p class="mt-3 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                    dolores repellat recusandae voluptatum assumenda autem modi
+                    deleniti libero alias, sunt iusto, minima ab corrupti
+                    voluptatibus!
+                  </p>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+                  <a href="./gdetail.html" class="btn nav__btn btn-block w-75"
+                    >İncele</a
+                  >
+                </div>
+              </div>
+              <div class="card">
+                <a href="./gdetail.html" class="card-img-top">
+                  <img
+                    class="img-fluid p-2"
+                    src="https://startupmarket.co/cache/360x180/upload/images/startup/65a2589b5621d948462186.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <a href="./gdetail.html" class="mr-3">
+                      <img
+                        class="rounded-circle"
+                        src="https://startupmarket.co/cache/100x100/upload/images/startup/65a25297bff43331372965.jpg"
+                        alt="Yef Logo"
+                      />
+                    </a>
+                    <div>
+                      <a href="./gdetail.html" class="card-title">Yef</a>
+                      <span class="card-subtitle d-block"
+                        >İstanbul, Türkiye</span
+                      >
+                    </div>
+                  </div>
+                  <p class="mt-3 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                    dolores repellat recusandae voluptatum assumenda autem modi
+                    deleniti libero alias, sunt iusto, minima ab corrupti
+                    voluptatibus!
+                  </p>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+                  <a href="./gdetail.html" class="btn nav__btn btn-block w-75"
+                    >İncele</a
+                  >
+                </div>
+              </div>
+              <div class="card">
+                <a href="./gdetail.html" class="card-img-top">
+                  <img
+                    class="img-fluid p-2"
+                    src="https://startupmarket.co/cache/360x180/upload/images/startup/65a2589b5621d948462186.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <a href="./gdetail.html" class="mr-3">
+                      <img
+                        class="rounded-circle"
+                        src="https://startupmarket.co/cache/100x100/upload/images/startup/65a25297bff43331372965.jpg"
+                        alt="Yef Logo"
+                      />
+                    </a>
+                    <div>
+                      <a href="./gdetail.html" class="card-title">Yef</a>
+                      <span class="card-subtitle d-block"
+                        >İstanbul, Türkiye</span
+                      >
+                    </div>
+                  </div>
+                  <p class="mt-3 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                    dolores repellat recusandae voluptatum assumenda autem modi
+                    deleniti libero alias, sunt iusto, minima ab corrupti
+                    voluptatibus!
+                  </p>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+                  <a href="./gdetail.html" class="btn nav__btn btn-block w-75"
+                    >İncele</a
+                  >
+                </div>
+              </div>
+              <div class="card">
+                <a href="./gdetail.html" class="card-img-top">
+                  <img
+                    class="img-fluid p-2"
+                    src="https://startupmarket.co/cache/360x180/upload/images/startup/65a2589b5621d948462186.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <a href="./gdetail.html" class="mr-3">
+                      <img
+                        class="rounded-circle"
+                        src="https://startupmarket.co/cache/100x100/upload/images/startup/65a25297bff43331372965.jpg"
+                        alt="Yef Logo"
+                      />
+                    </a>
+                    <div>
+                      <a href="./gdetail.html" class="card-title">Yef</a>
+                      <span class="card-subtitle d-block"
+                        >İstanbul, Türkiye</span
+                      >
+                    </div>
+                  </div>
+                  <p class="mt-3 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                    dolores repellat recusandae voluptatum assumenda autem modi
+                    deleniti libero alias, sunt iusto, minima ab corrupti
+                    voluptatibus!
+                  </p>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+                  <a href="./gdetail.html" class="btn nav__btn btn-block w-75"
+                    >İncele</a
+                  >
+                </div>
+              </div>
+              <div class="card">
+                <a href="./gdetail.html" class="card-img-top">
+                  <img
+                    class="img-fluid p-2"
+                    src="https://startupmarket.co/cache/360x180/upload/images/startup/65a2589b5621d948462186.jpg"
+                    alt=""
+                  />
+                </a>
+                <div class="card-body">
+                  <div class="d-flex align-items-center">
+                    <a href="./gdetail.html" class="mr-3">
+                      <img
+                        class="rounded-circle"
+                        src="https://startupmarket.co/cache/100x100/upload/images/startup/65a25297bff43331372965.jpg"
+                        alt="Yef Logo"
+                      />
+                    </a>
+                    <div>
+                      <a href="./gdetail.html" class="card-title">Yef</a>
+                      <span class="card-subtitle d-block"
+                        >İstanbul, Türkiye</span
+                      >
+                    </div>
+                  </div>
+                  <p class="mt-3 line-clamp-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
+                    dolores repellat recusandae voluptatum assumenda autem modi
+                    deleniti libero alias, sunt iusto, minima ab corrupti
+                    voluptatibus!
+                  </p>
+                </div>
+                <div class="card-body d-flex justify-content-center">
+                  <a href="./gdetail.html" class="btn nav__btn btn-block w-75"
+                    >İncele</a
+                  >
+                </div>
+              </div>
+              <!-- card son -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer_area">
+      <div class="container">
+        <div class="row custom-padding">
+          <div class="col-12 col-sm-6 col-lg-4 custom-padding">
+            <div class="single-footer">
+              <!-- Footer Logo-->
+              <div class="footer-logo mb-3"></div>
+              <a class="navbar-brand" href="#">
+                <img
+                  src="./assets/logo.png"
+                  alt="Bootstrap"
+                  width="200px"
+                  height="34px"
+                />
+              </a>
+              <!-- Footer Social Area-->
+              <div class="footer_social_area my-5 mb-md-0">
+                <a
+                  href="https://www.linkedin.com/company/startupteknoloji/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
+
+                <a
+                  href="https://www.instagram.com/startupteknoloji/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-instagram"></i
+                ></a>
+
+                <a
+                  href="https://www.facebook.com/startupteknoloji"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-facebook"></i
+                ></a>
+
+                <a
+                  href="https://twitter.com/startuptek"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-twitter"></i
+                ></a>
+
+                <a
+                  href="https://www.youtube.com/channel/UCidxH9WD49L7Ipaett5rGtA"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><i class="fab fa-youtube"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg custom-padding">
+            <div class="single-footer">
+              <h5 class="footer_title">About</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Corporate Sale</a></li>
+                  <li><a href="#">Terms &amp; Policy</a></li>
+                  <li><a href="#">Community</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-lg custom-padding">
+            <div class="single-footer">
+              <h5 class="footer_title">Support</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">Help</a></li>
+                  <li><a href="#">Support</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Term &amp; Conditions</a></li>
+                  <li><a href="#">Help &amp; Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Single Widget-->
+          <div class="col-12 col-sm-6 col-lg custom-padding">
+            <div class="single-footer">
+              <h5 class="footer_title">Contact</h5>
+              <div class="footer_menu">
+                <ul>
+                  <li><a href="#">Call Centre</a></li>
+                  <li><a href="#">Email Us</a></li>
+                  <li><a href="#">Term &amp; Conditions</a></li>
+                  <li><a href="#">Help Center</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="./assets/js/app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

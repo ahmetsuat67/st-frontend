@@ -1,0 +1,206 @@
+
+
+.main-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    color: #333;
+}
+
+.section {
+    background-color: #e8e8e8; /* Daha belirgin gri arka plan */
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölgelendirme */
+    border: 1px solid #d0d0d0; /* Hafif kenar çizgisi */
+}
+
+/* İki alanı aynı satırda göstermek için flexbox konteyneri */
+.input-group {
+    display: flex;
+    justify-content: space-between; /* Alanlar arasında boşluk */
+    margin-top: 10px;
+}
+
+.input-group label, 
+.input-group input {
+    width: 30%; /* Her bir eleman için yüzde genişlik */
+    margin-top: 0; /* Üst marjı kaldır */
+}
+
+/* Diğer alanlar */
+label, input, select, textarea {
+    display: block;
+    width: 54%;
+    margin-top: 10px;
+}
+
+input[type="text"], select, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+input[type="file"] {
+    border: none;
+}
+
+#logoPreview {
+    max-width: 100px;
+    margin-top: 10px;
+}
+
+.main-container button {
+    margin-top: 20px;
+    padding: 10px 20px;  
+    background-color:#fd9e01 ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.main-container button:hover {
+    background-color: rgb(5, 5, 4);
+}
+
+
+.radio-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.radio-column {
+    display: flex;
+    flex-direction: column;
+    width: 48%; /* Sütun genişliği */
+}
+
+.radio-column label {
+    font-size: 0.8em; /* Küçültülmüş yazı boyutu */
+    margin-bottom: 2px; /* Alt marj */
+    display: flex;
+    align-items: center; /* Etiket ve radio butonu dikey olarak hizala */
+    white-space: nowrap; /* Metni tek satırda tut */
+}
+
+.radio-column label input[type="radio"] {
+    margin-right: 2px; /* Radio butonu ve yazı arasındaki boşluğu azalt */
+}
+
+.radio-group-inline {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.question-container, .answers-container {
+    flex: 1;
+}
+
+.radio-question {
+    white-space: nowrap;
+}
+
+.answers-container label {
+    margin-right: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+
+/* Diğer stiller sabit kalacak, sadece logo yükleme alanı için eklemeler yapılıyor */
+
+.logo-upload-container {
+    background-color: #e0e0e0; /* Gri arka plan */
+    width: 200px;  /* Kare boyutu */
+    height: 200px; /* Kare boyutu */
+    margin: 10px auto; /* Otomatik kenar boşlukları ile merkezde */
+    border-radius: 8px; /* Hafif yuvarlatılmış köşeler */
+    display: flex; /* Flexbox ile içerikleri hizalama */
+    align-items: center; /* Dikey hizalama */
+    justify-content: center; /* Yatay hizalama */
+    overflow: hidden; /* Taşan kısımları gizle */
+}
+
+#logoUploadLabel {
+    background-color: #fd9e01 ; /* Buton rengi */
+    color: white; /* Buton yazı rengi */
+    padding: 10px 0; /* Üst ve alt dolgu */
+    width: 200px; /* Logo yükleme alanı genişliğiyle aynı */
+    margin: 0 auto; /* Merkezde olması için */
+    border-radius: 4px; /* Yuvarlatılmış köşeler */
+    cursor: pointer; /* İmleç buton görünümü */
+    display: block; /* Blok seviyesinde, kendi satırında */
+    text-align: center; /* Metni ortala */
+}
+
+#logoUploadLabel:hover {
+    background-color: rgb(5, 5, 4); /* Butona hover efekti */
+}
+
+#logoPreview {
+    max-width: 100%; /* Resmin maksimum genişliği (kareye sığacak şekilde) */
+    max-height: 100%; /* Resmin maksimum yüksekliği */
+}
+
+#logoUpload {
+    display: none; /* Varsayılan dosya yükleme butonunu gizle */
+}
+
+
+/* Mevcut Stillerinize Ekleyin */
+
+.dual-select-container {
+    display: flex;
+    justify-content: space-between; /* İki grup arasında boşluk sağlar */
+    align-items: center; /* Etiketler ve seçim kutularını dikey olarak hizalar */
+    flex-wrap: wrap; /* Ekrana sığmazsa alt satıra geçer */
+}
+
+.select-group {
+    flex-basis: 48%; /* Her grup genişliği, %50'ye yakın ama tam değil */
+    margin-bottom: 10px; /* Altta biraz boşluk bırakır */
+}
+
+.select-group label, .select-group select {
+    width: 100%; /* Tam genişlikte etiket ve seçim kutusu */
+    margin-bottom: 5px; /* Etiket ve seçim kutusu arasında boşluk */
+}
+
+.select-group select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+
+.checkbox-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* İki sütun oluştur */
+    gap: 1px; /* Kutular arasında 10px boşluk bırak */
+    margin-bottom: 1px; /* Alt kısımda 20px boşluk bırak */
+}
+
+.etiket {
+    display: flex;
+    align-items: center;
+    background-color: #ddd;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap; /* Etiketleri tek satırda tut */
+}
+
+.etiket:hover {
+    background-color: #ccc;
+}
+
+
